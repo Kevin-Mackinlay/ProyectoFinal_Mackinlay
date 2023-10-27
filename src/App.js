@@ -1,5 +1,6 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar.jsx";
 // import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
@@ -11,19 +12,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div >
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
         {/* <CartProvider> */}
           <NavBar />
-           <Routes>
+          <ItemListContainer greeting='Bienvenidos a todo Sports'/>
+
+           {/* <Routes> */}
             {/* <Route path="/" element={<ItemListContainer greeting={"Todos nuestros productos"} />} /> */}
             {/* <Route path="/category/:categoryId" element={<ItemListContainer greeting={"Productos por categoria"} />} />
             <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<h1>404 NOT FOUND</h1>} /> */}
-           </Routes>
+           {/* </Routes> */}
         {/* </CartProvider> */}
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
