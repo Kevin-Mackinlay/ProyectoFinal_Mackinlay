@@ -1,6 +1,7 @@
 const list = [
-  { id: "01", name: "Zapatillas", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/zapas.avif" },
-  { id: "02", name: "Remeras", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/remera.jpg" },
+  { id: "01", category:'calzados', name: "Zapatillas", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/zapas.avif" },
+  { id: "02", category:'camisetas', name: "Remeras", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/remera.jpg" },
+  { id: "03", category:'shorts', name: "Remeras", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/remera.jpg" },
 ];
 
 
@@ -18,10 +19,10 @@ const list = [
    });
  };
 
- export const getItem = () => {
+ export const getItem = (id) => {
     return new Promise((resolve) => {
         setTimeout(()=>{
-            resolve(list[1])
+            resolve(list.find((item)=> item.id === id))
         },2000)
     })
  }
