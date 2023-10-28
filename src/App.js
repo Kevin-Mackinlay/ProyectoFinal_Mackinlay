@@ -15,7 +15,7 @@ function App() {
       {/* <BrowserRouter> */}
         {/* <CartProvider> */}
           <NavBar />
-          <ItemListContainer greeting='Bienvenidos a todo Sports'/>
+          <ItemListContainer greeting='Bienvenidos!'/>
 
            {/* <Routes> */}
             {/* <Route path="/" element={<ItemListContainer greeting={"Todos nuestros productos"} />} /> */}
