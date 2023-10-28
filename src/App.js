@@ -1,4 +1,5 @@
 import "./App.css";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar.jsx";
@@ -16,6 +17,7 @@ function App() {
         {/* <CartProvider> */}
           <NavBar />
           <ItemListContainer greeting='Bienvenidos!'/>
+          <ItemDetailContainer/>
 
            {/* <Routes> */}
             {/* <Route path="/" element={<ItemListContainer greeting={"Todos nuestros productos"} />} /> */}
