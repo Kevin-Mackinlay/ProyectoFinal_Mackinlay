@@ -6,7 +6,7 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../service/firebase";
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState({});
+  const [product, setProduct] = useState({});
   const [loader, setLoader] = useState(false)
   const { id } = useParams();
 
@@ -20,17 +20,17 @@ const ItemDetailContainer = () => {
 //   }, []);
 useEffect(()=>{
     setLoader(true)
-    const collectionProd = collection(db, 'productos')
+    const collectionProd = collection(db, 'products')
     const referenceToDoc = doc(collectionProd, id)
     getDoc(referenceToDoc)
-    .then((res)=> setProducto({id:res.id, ...res.data()}))
+    .then((res)=> setProduct({id:res.id, ...res.data()}))
     .catch((error)=> console.log(error))
     .finally(()=> setLoader(false))
 },[])
 
   return(
 <div>
-    {loader ? <p>Cargando...</p> : <ItemDetail producto={producto}/>}
+    {loader ? <p>Cargando...</p> : <ItemDetail product={product}/>}
 </div>
 
   ) 

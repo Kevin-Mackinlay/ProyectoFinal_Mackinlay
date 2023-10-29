@@ -10,7 +10,7 @@ import React, { useEffect } from "react";
 // import { addDoc, collection } from "firebase/firestore";
 // import { db } from "./service/firebase";
 // import { list } from "./mock/data";
-// import Checkout from "./components/Checkout/Checkout";
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
  
@@ -22,9 +22,9 @@ function App() {
           <Routes>
             <Route path="/" element={<ItemListContainer greeting={"Todos nuestros productos"} />} />
             <Route path="/category/:categoryId" element={<ItemListContainer greeting={"Bienvenidos a categoria: "} />} />
-            <Route path="/item/:Id" element={<ItemDetailContainer />} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
-            {/* <Route path="/checkout" element={<Checkout />} /> */}
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
