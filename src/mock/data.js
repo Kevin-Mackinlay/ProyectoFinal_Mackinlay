@@ -1,7 +1,8 @@
-const list = [
-  { id: "01", category:'calzados', name: "Zapatillas", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/zapas.avif" },
-  { id: "02", category:'camisetas', name: "Remeras", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/remera.jpg" },
-  { id: "03", category:'shorts', name: "Remeras", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/remera.jpg" },
+export const list = [
+  { category:'calzados', name: "zapatillas Nike", stock: 10, price: 30000, description: "lorem lorem lorem", img: "../images/zapas.avif" },
+  {  category:'camisetas', name: "white shirt", stock: 10, price: 20000, description: "lorem lorem lorem", img: "../images/remera.jpg" },
+  {  category:'shorts', name: "black shorts", stock: 8, price: 30000, description: "lorem lorem lorem", img: "../images/blackshort.avif" },
+  {  category:'calzados', name: "zapatillas Puma", stock: 5, price: 40000, description: "lorem lorem lorem", img: "../images/zapatillas puma.jpg" },
 ];
 
 
