@@ -7,33 +7,27 @@ import { db } from "../../service/firebase";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
-  const [loader, setLoader] = useState(false)
+  const [loader, setLoader] = useState(false);
   const { id } = useParams();
 
+  useEffect(() => {
+    setLoader(true);
+    if (id) {
+      const collectionProd = collection(db, "products");
+      const referenceToDoc = doc(collectionProd, id);
 
-//   useEffect(() => {
-//     setLoader(true)
-//     getItem(id)
-//       .then((res) => setProductos(res))
-//       .catch((error) => console.log(error))
-//       .finally(()=> setLoader(false))
-//   }, []);
-useEffect(()=>{
-    setLoader(true)
-    const collectionProd = collection(db, 'products')
-    const referenceToDoc = doc(collectionProd, id)
-    getDoc(referenceToDoc)
-    .then((res)=> setProduct({id:res.id, ...res.data()}))
-    .catch((error)=> console.log(error))
-    .finally(()=> setLoader(false))
-},[])
+      getDoc(referenceToDoc)
+        .then((res) => setProduct({ id: res.id, ...res.data() }))
+        .catch((error) => console.log(error))
+        .finally(() => setLoader(false));
+    } else {
+      // Handle the case where id is empty or undefined, e.g., redirect to an error page or show an error message.
+      console.log("Invalid id");
+      setLoader(false);
+    }
+  }, [id]); // Include `id` in the dependency array to re-run the effect whenever `id` changes.
 
-  return(
-<div>
-    {loader ? <p>Cargando...</p> : <ItemDetail product={product}/>}
-</div>
-
-  ) 
+  return <div>{loader ? <p>Cargando...</p> : <ItemDetail product={product} />}</div>;
 };
 
 export default ItemDetailContainer;
