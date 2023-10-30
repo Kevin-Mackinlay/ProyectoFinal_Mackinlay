@@ -1,0 +1,16 @@
+.CardItem {
+   background-color: rgba(127, 255, 212, 0.578);
+  width: 300px;
+  height: 500px;
+  /* border: 5px solid black; */
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  ;
+}
+.CardItem:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.624);
+}

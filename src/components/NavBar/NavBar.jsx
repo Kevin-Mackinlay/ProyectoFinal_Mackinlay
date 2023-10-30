@@ -4,11 +4,14 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../Cartwidget/CartWidget";
 import { NavLink } from "react-router-dom";
+import './NavBar.css'
+
+
 function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={NavLink} to="/">
+        <Navbar.Brand style={{fontSize:"30px", fontWeight:"500"}} as={NavLink} to="/">
           Todo Sports
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

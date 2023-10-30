@@ -9,7 +9,7 @@ import "./CartItem.css";
 const CartItem = ({ item }) => {
   const { deleteItem } = useContext(CartContext);
   return (
-    <div className="Div">
+    <div className="CartItem">
       <img src={item.img} alt={item.name} className="img_carrito" />
       <p>{item.name}</p>
       <p>${item.price}</p>

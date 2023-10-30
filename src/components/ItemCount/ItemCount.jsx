@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-
+import './ItemCount.css'
 const ItemCount = ({ stock, onAdd, initial }) => {
   const [count, setCount] = useState(initial);
   const sumar = () => {

@@ -20,7 +20,7 @@ const Cart = () => {
             <Button className="btn btn-danger" onClick={clearCart}>
               Vaciar Carrito
             </Button>
-            <Link to="/checkout" className="btn btn-secondary Option">
+            <Link to="/checkout" className="btn btn-secondary">
               Terminar Compra
             </Link>
           </div>

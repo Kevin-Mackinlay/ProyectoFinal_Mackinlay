@@ -1,0 +1,13 @@
+.ItemDetail{
+  
+  background-color: rgba(101, 152, 240, 0.578);
+    width: 600px;
+    height: 800px;
+    border: 5px solid rgb(127, 127, 127);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+}
