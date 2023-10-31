@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-import { collection, serverTimestamp, writeBatch, addDoc, getDocs, query, where } from "firebase/firestore";
+import { collection, serverTimestamp, addDoc } from "firebase/firestore";
 import Button from "react-bootstrap/Button";
 import "./Checkout.css";
 import { db } from "../../service/firebase";
@@ -20,7 +20,7 @@ const Checkout = () => {
   const finalizarCompra = (e) => {
     e.preventDefault();
     if (!user.name && user.phone) {
-      alert("los campos son obligatorios");
+      alert("completar los campos");
     } else {
       let order = {
         user,
@@ -43,7 +43,7 @@ const Checkout = () => {
         <div>
           <h2>Felicitaciones!! Tu orden fue generada!!</h2>
           <h5>Su id de registro es: {orderId}</h5>
-          {/* <img src={Img} /> */}
+       
         </div>
       ) : (
         <div className="form">

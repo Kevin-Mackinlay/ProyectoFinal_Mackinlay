@@ -4,8 +4,6 @@ export const CartContext = createContext({});
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
-
-
   const addItem = (item, quantity) => {
     if (isInCart(item.id)) {
       setCart(
@@ -13,7 +11,7 @@ export const CartProvider = ({ children }) => {
           if (product.id === item.id) {
             return { ...product, quantity: product.quantity + quantity };
           } else {
-            return product;
+            return product
           }
         })
       );

@@ -13,8 +13,8 @@ const CartItem = ({ item }) => {
       <img src={item.img} alt={item.name} className="img_carrito" />
       <p>{item.name}</p>
       <p>${item.price}</p>
-      <p>{item.quantity}</p>
-      <p>Sub total: {item.quantity * item.price}</p>
+      <p>Cantidad: {item.quantity}</p>
+      <p>Subtotal: {item.quantity * item.price}</p>
       <Button className="btn btn-danger x" onClick={() => deleteItem(item.id)}>
         X
       </Button>

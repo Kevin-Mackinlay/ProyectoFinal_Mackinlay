@@ -3,7 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../Cartwidget/CartWidget";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './NavBar.css'
 
 
@@ -35,7 +35,7 @@ function NavBar() {
               <NavDropdown.Item as={NavLink} to='/'>Todos los productos</NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <CartWidget />
+         <NavLink style= {{textDecoration:'none'}}to='/cart'><CartWidget/> </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
